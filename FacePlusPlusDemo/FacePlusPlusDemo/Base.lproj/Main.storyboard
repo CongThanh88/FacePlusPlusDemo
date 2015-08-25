@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -47,15 +48,26 @@
                                     <action selector="btnTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcS-S0-Jcg"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HuR-XZ-5qc">
+                                <rect key="frame" x="30" y="141" width="540" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Fpf-Pg-WsS" secondAttribute="centerX" id="B7L-Cm-xD6"/>
+                            <constraint firstItem="HuR-XZ-5qc" firstAttribute="top" secondItem="R5H-hb-7Kd" secondAttribute="bottom" constant="24" id="EQS-jE-fPx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HuR-XZ-5qc" secondAttribute="trailing" constant="14" id="IpY-nQ-g5M"/>
+                            <constraint firstItem="HuR-XZ-5qc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="SS5-I6-QZS"/>
                             <constraint firstItem="Fpf-Pg-WsS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Urc-Iz-kLk"/>
                             <constraint firstItem="R5H-hb-7Kd" firstAttribute="top" secondItem="Fpf-Pg-WsS" secondAttribute="bottom" constant="21" id="fkG-ej-XdN"/>
                             <constraint firstAttribute="centerX" secondItem="R5H-hb-7Kd" secondAttribute="centerX" id="pGo-oA-nMe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HuR-XZ-5qc" secondAttribute="bottom" constant="20" id="pRT-Vc-cGW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="HuR-XZ-5qc" id="RkY-IZ-Kis"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

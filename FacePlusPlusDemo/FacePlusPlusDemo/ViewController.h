@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FaceppAPI.h"
+#import "FaceDetecUtil.h"
 
-@interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, FaceDetectUtilDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *previewView;
 - (IBAction)btnChosePhoto:(id)sender;
 - (IBAction)btnTakePhoto:(id)sender;
 

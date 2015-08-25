@@ -13,11 +13,13 @@
 #define PERSON_NAME     @"Do Hung Tam"
 
 
+
 @implementation ViewController
 {
     BOOL isFirstStart;
     NSMutableArray *personIds;
     UIImagePickerController *imagePicker;
+    FaceDetecUtil *faceUtil;
 }
 
 - (void)viewDidLoad
@@ -26,6 +28,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     imagePicker = [[UIImagePickerController alloc] init];
     isFirstStart = YES;
+    
+//    faceUtil = [[FaceDetecUtil alloc]init];
+//    faceUtil.delegate = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -132,6 +137,8 @@
     
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     
+//    faceUtil.previewView = _previewView;
+//    [faceUtil setupAVCapture];
 }
 
 - (void)didReceiveMemoryWarning
@@ -251,7 +258,7 @@
 }
 
 // Use facepp SDK to detect faces
--(void) detectWithImage: (UIImage*) image {
+-(BOOL) detectWithImage: (UIImage*) image {
 
     FaceppResult *detectLocalFileResult = [[ FaceppAPI detection ] detectWithURL : nil orImageData : UIImageJPEGRepresentation (image , 0.6 ) mode : FaceppDetectionModeNormal attribute : FaceppDetectionAttributeAll tag : nil async : NO ];
     if ([detectLocalFileResult success]) {
@@ -269,13 +276,14 @@
                     
                     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"verify" message:[NSString stringWithFormat:@"verify %@", PERSON_NAME] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                     [alert show];
-                    
-                    return;
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    return YES;
                 }
             }
         }
         
     } else {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         // some errors occurred
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle:[NSString stringWithFormat:@"error message: %@", [detectLocalFileResult error].message]
@@ -285,7 +293,7 @@
                               otherButtonTitles:nil];
         [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
     }
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    return NO;
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -302,5 +310,21 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - FaceDetectUtilDelegate
+-(void)didDetectedFaceWithImage:(UIImage *)image
+{
+    if (image) {
+        _previewView.hidden = YES;
+        faceUtil.delegate = nil;
+        UIImageView *imgv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _previewView.frame.size.width, _previewView.frame.size.height)];
+        imgv.image = image;
+        [_previewView addSubview:imgv];
+        if([self detectWithImage:image])
+        {
+            
+        }
+    }
 }
 @end
