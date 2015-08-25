@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A420E5E91B8C1BF8001296AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E5E81B8C1BF8001296AA /* main.m */; };
+		A420E5EC1B8C1BF8001296AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E5EB1B8C1BF8001296AA /* AppDelegate.m */; };
+		A420E5EF1B8C1BF8001296AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E5EE1B8C1BF8001296AA /* ViewController.m */; };
+		A420E5F21B8C1BF8001296AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A420E5F01B8C1BF8001296AA /* Main.storyboard */; };
+		A420E5F41B8C1BF8001296AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A420E5F31B8C1BF8001296AA /* Images.xcassets */; };
+		A420E5F71B8C1BF8001296AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A420E5F51B8C1BF8001296AA /* LaunchScreen.xib */; };
+		A420E6031B8C1BF8001296AA /* FacePlusPlusDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6021B8C1BF8001296AA /* FacePlusPlusDemoTests.m */; };
+		A420E6161B8C1F1A001296AA /* APIKey+APISecret.h in Sources */ = {isa = PBXBuildFile; fileRef = A420E6151B8C1F0A001296AA /* APIKey+APISecret.h */; };
+		A420E61D1B8C1F4B001296AA /* FaceppAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6191B8C1F4B001296AA /* FaceppAPI.m */; };
+		A420E6211B8C1F67001296AA /* FaceppAPI.h in Sources */ = {isa = PBXBuildFile; fileRef = A420E6181B8C1F4B001296AA /* FaceppAPI.h */; };
+		A420E6531B8C1F8A001296AA /* FaceppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6241B8C1F8A001296AA /* FaceppClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6541B8C1F8A001296AA /* FaceppDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6261B8C1F8A001296AA /* FaceppDetection.m */; };
+		A420E6551B8C1F8A001296AA /* FaceppFaceset.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6281B8C1F8A001296AA /* FaceppFaceset.m */; };
+		A420E6561B8C1F8A001296AA /* FaceppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E62A1B8C1F8A001296AA /* FaceppGroup.m */; };
+		A420E6571B8C1F8A001296AA /* FaceppGrouping.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E62C1B8C1F8A001296AA /* FaceppGrouping.m */; };
+		A420E6581B8C1F8A001296AA /* FaceppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E62E1B8C1F8A001296AA /* FaceppInfo.m */; };
+		A420E6591B8C1F8A001296AA /* FaceppPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6301B8C1F8A001296AA /* FaceppPerson.m */; };
+		A420E65A1B8C1F8A001296AA /* FaceppRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6321B8C1F8A001296AA /* FaceppRecognition.m */; };
+		A420E65B1B8C1F8A001296AA /* FaceppTrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6341B8C1F8A001296AA /* FaceppTrainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E65C1B8C1F8A001296AA /* FaceppError.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6371B8C1F8A001296AA /* FaceppError.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E65D1B8C1F8A001296AA /* FaceppResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6391B8C1F8A001296AA /* FaceppResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E65E1B8C1F8A001296AA /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E63C1B8C1F8A001296AA /* CDataScanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E65F1B8C1F8A001296AA /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E63F1B8C1F8A001296AA /* CFilteringJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6601B8C1F8A001296AA /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6411B8C1F8A001296AA /* CJSONDeserializer_BlocksExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6611B8C1F8A001296AA /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6431B8C1F8A001296AA /* CJSONSerialization.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6621B8C1F8A001296AA /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6451B8C1F8A001296AA /* CJSONSerializedData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6631B8C1F8A001296AA /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6481B8C1F8A001296AA /* CDataScanner_Extensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6641B8C1F8A001296AA /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E64A1B8C1F8A001296AA /* NSDictionary_JSONExtensions.m */; };
+		A420E6651B8C1F8A001296AA /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E64D1B8C1F8A001296AA /* CJSONDeserializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6661B8C1F8A001296AA /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E64F1B8C1F8A001296AA /* CJSONScanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6671B8C1F8A001296AA /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E6511B8C1F8A001296AA /* CJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E66B1B8C1FAB001296AA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A420E66A1B8C1FAB001296AA /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A420E6781B8C279A001296AA /* Picture 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E66D1B8C279A001296AA /* Picture 1.jpg */; };
+		A420E6791B8C279A001296AA /* Picture 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E66E1B8C279A001296AA /* Picture 10.jpg */; };
+		A420E67A1B8C279A001296AA /* Picture 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E66F1B8C279A001296AA /* Picture 11.jpg */; };
+		A420E67B1B8C279A001296AA /* Picture 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6701B8C279A001296AA /* Picture 2.jpg */; };
+		A420E67C1B8C279A001296AA /* Picture 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6711B8C279A001296AA /* Picture 3.jpg */; };
+		A420E67D1B8C279A001296AA /* Picture 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6721B8C279A001296AA /* Picture 4.jpg */; };
+		A420E67E1B8C279A001296AA /* Picture 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6731B8C279A001296AA /* Picture 5.jpg */; };
+		A420E67F1B8C279A001296AA /* Picture 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6741B8C279A001296AA /* Picture 6.jpg */; };
+		A420E6801B8C279A001296AA /* Picture 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6751B8C279A001296AA /* Picture 7.jpg */; };
+		A420E6811B8C279A001296AA /* Picture 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6761B8C279A001296AA /* Picture 8.jpg */; };
+		A420E6821B8C279A001296AA /* Picture 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A420E6771B8C279A001296AA /* Picture 9.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A420E5FD1B8C1BF8001296AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A420E5DB1B8C1BF7001296AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A420E5E21B8C1BF8001296AA;
+			remoteInfo = FacePlusPlusDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A420E5E31B8C1BF8001296AA /* FacePlusPlusDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacePlusPlusDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A420E5E71B8C1BF8001296AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A420E5E81B8C1BF8001296AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A420E5EA1B8C1BF8001296AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A420E5EB1B8C1BF8001296AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A420E5ED1B8C1BF8001296AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A420E5EE1B8C1BF8001296AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A420E5F11B8C1BF8001296AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A420E5F31B8C1BF8001296AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A420E5F61B8C1BF8001296AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A420E5FC1B8C1BF8001296AA /* FacePlusPlusDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacePlusPlusDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A420E6011B8C1BF8001296AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A420E6021B8C1BF8001296AA /* FacePlusPlusDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacePlusPlusDemoTests.m; sourceTree = "<group>"; };
+		A420E6151B8C1F0A001296AA /* APIKey+APISecret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "APIKey+APISecret.h"; path = "Categories/APIKey+APISecret.h"; sourceTree = "<group>"; };
+		A420E6181B8C1F4B001296AA /* FaceppAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FaceppAPI.h; path = FaceppSDK/FaceppAPI.h; sourceTree = "<group>"; };
+		A420E6191B8C1F4B001296AA /* FaceppAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FaceppAPI.m; path = FaceppSDK/FaceppAPI.m; sourceTree = "<group>"; };
+		A420E6231B8C1F8A001296AA /* FaceppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppClient.h; sourceTree = "<group>"; };
+		A420E6241B8C1F8A001296AA /* FaceppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppClient.m; sourceTree = "<group>"; };
+		A420E6251B8C1F8A001296AA /* FaceppDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppDetection.h; sourceTree = "<group>"; };
+		A420E6261B8C1F8A001296AA /* FaceppDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppDetection.m; sourceTree = "<group>"; };
+		A420E6271B8C1F8A001296AA /* FaceppFaceset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppFaceset.h; sourceTree = "<group>"; };
+		A420E6281B8C1F8A001296AA /* FaceppFaceset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppFaceset.m; sourceTree = "<group>"; };
+		A420E6291B8C1F8A001296AA /* FaceppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppGroup.h; sourceTree = "<group>"; };
+		A420E62A1B8C1F8A001296AA /* FaceppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppGroup.m; sourceTree = "<group>"; };
+		A420E62B1B8C1F8A001296AA /* FaceppGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppGrouping.h; sourceTree = "<group>"; };
+		A420E62C1B8C1F8A001296AA /* FaceppGrouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppGrouping.m; sourceTree = "<group>"; };
+		A420E62D1B8C1F8A001296AA /* FaceppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppInfo.h; sourceTree = "<group>"; };
+		A420E62E1B8C1F8A001296AA /* FaceppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppInfo.m; sourceTree = "<group>"; };
+		A420E62F1B8C1F8A001296AA /* FaceppPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppPerson.h; sourceTree = "<group>"; };
+		A420E6301B8C1F8A001296AA /* FaceppPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppPerson.m; sourceTree = "<group>"; };
+		A420E6311B8C1F8A001296AA /* FaceppRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppRecognition.h; sourceTree = "<group>"; };
+		A420E6321B8C1F8A001296AA /* FaceppRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppRecognition.m; sourceTree = "<group>"; };
+		A420E6331B8C1F8A001296AA /* FaceppTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppTrainer.h; sourceTree = "<group>"; };
+		A420E6341B8C1F8A001296AA /* FaceppTrainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppTrainer.m; sourceTree = "<group>"; };
+		A420E6361B8C1F8A001296AA /* FaceppError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppError.h; sourceTree = "<group>"; };
+		A420E6371B8C1F8A001296AA /* FaceppError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppError.m; sourceTree = "<group>"; };
+		A420E6381B8C1F8A001296AA /* FaceppResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppResult.h; sourceTree = "<group>"; };
+		A420E6391B8C1F8A001296AA /* FaceppResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppResult.m; sourceTree = "<group>"; };
+		A420E63B1B8C1F8A001296AA /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		A420E63C1B8C1F8A001296AA /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		A420E63E1B8C1F8A001296AA /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
+		A420E63F1B8C1F8A001296AA /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
+		A420E6401B8C1F8A001296AA /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
+		A420E6411B8C1F8A001296AA /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
+		A420E6421B8C1F8A001296AA /* CJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerialization.h; sourceTree = "<group>"; };
+		A420E6431B8C1F8A001296AA /* CJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerialization.m; sourceTree = "<group>"; };
+		A420E6441B8C1F8A001296AA /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
+		A420E6451B8C1F8A001296AA /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
+		A420E6471B8C1F8A001296AA /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		A420E6481B8C1F8A001296AA /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		A420E6491B8C1F8A001296AA /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		A420E64A1B8C1F8A001296AA /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		A420E64C1B8C1F8A001296AA /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		A420E64D1B8C1F8A001296AA /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		A420E64E1B8C1F8A001296AA /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		A420E64F1B8C1F8A001296AA /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		A420E6501B8C1F8A001296AA /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		A420E6511B8C1F8A001296AA /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		A420E6521B8C1F8A001296AA /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		A420E6691B8C1FAB001296AA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A420E66A1B8C1FAB001296AA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A420E66D1B8C279A001296AA /* Picture 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 1.jpg"; sourceTree = "<group>"; };
+		A420E66E1B8C279A001296AA /* Picture 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 10.jpg"; sourceTree = "<group>"; };
+		A420E66F1B8C279A001296AA /* Picture 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 11.jpg"; sourceTree = "<group>"; };
+		A420E6701B8C279A001296AA /* Picture 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 2.jpg"; sourceTree = "<group>"; };
+		A420E6711B8C279A001296AA /* Picture 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 3.jpg"; sourceTree = "<group>"; };
+		A420E6721B8C279A001296AA /* Picture 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 4.jpg"; sourceTree = "<group>"; };
+		A420E6731B8C279A001296AA /* Picture 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 5.jpg"; sourceTree = "<group>"; };
+		A420E6741B8C279A001296AA /* Picture 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 6.jpg"; sourceTree = "<group>"; };
+		A420E6751B8C279A001296AA /* Picture 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 7.jpg"; sourceTree = "<group>"; };
+		A420E6761B8C279A001296AA /* Picture 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 8.jpg"; sourceTree = "<group>"; };
+		A420E6771B8C279A001296AA /* Picture 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Picture 9.jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A420E5E01B8C1BF8001296AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420E5F91B8C1BF8001296AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A420E5DA1B8C1BF7001296AA = {
+			isa = PBXGroup;
+			children = (
+				A420E5E51B8C1BF8001296AA /* FacePlusPlusDemo */,
+				A420E5FF1B8C1BF8001296AA /* FacePlusPlusDemoTests */,
+				A420E5E41B8C1BF8001296AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A420E5E41B8C1BF8001296AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A420E5E31B8C1BF8001296AA /* FacePlusPlusDemo.app */,
+				A420E5FC1B8C1BF8001296AA /* FacePlusPlusDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A420E5E51B8C1BF8001296AA /* FacePlusPlusDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A420E66C1B8C279A001296AA /* Sources */,
+				A420E6681B8C1FAB001296AA /* Libraries */,
+				A420E6171B8C1F2A001296AA /* FaceppSDK */,
+				A420E6141B8C1EFE001296AA /* Categories */,
+				A420E5EA1B8C1BF8001296AA /* AppDelegate.h */,
+				A420E5EB1B8C1BF8001296AA /* AppDelegate.m */,
+				A420E5ED1B8C1BF8001296AA /* ViewController.h */,
+				A420E5EE1B8C1BF8001296AA /* ViewController.m */,
+				A420E5F01B8C1BF8001296AA /* Main.storyboard */,
+				A420E5F31B8C1BF8001296AA /* Images.xcassets */,
+				A420E5F51B8C1BF8001296AA /* LaunchScreen.xib */,
+				A420E5E61B8C1BF8001296AA /* Supporting Files */,
+			);
+			path = FacePlusPlusDemo;
+			sourceTree = "<group>";
+		};
+		A420E5E61B8C1BF8001296AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A420E5E71B8C1BF8001296AA /* Info.plist */,
+				A420E5E81B8C1BF8001296AA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A420E5FF1B8C1BF8001296AA /* FacePlusPlusDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6021B8C1BF8001296AA /* FacePlusPlusDemoTests.m */,
+				A420E6001B8C1BF8001296AA /* Supporting Files */,
+			);
+			path = FacePlusPlusDemoTests;
+			sourceTree = "<group>";
+		};
+		A420E6001B8C1BF8001296AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6011B8C1BF8001296AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A420E6141B8C1EFE001296AA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6151B8C1F0A001296AA /* APIKey+APISecret.h */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		A420E6171B8C1F2A001296AA /* FaceppSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6221B8C1F8A001296AA /* FaceppAPISource */,
+				A420E6351B8C1F8A001296AA /* FaceppResult */,
+				A420E63A1B8C1F8A001296AA /* TouchJSON */,
+				A420E6181B8C1F4B001296AA /* FaceppAPI.h */,
+				A420E6191B8C1F4B001296AA /* FaceppAPI.m */,
+			);
+			name = FaceppSDK;
+			sourceTree = "<group>";
+		};
+		A420E6221B8C1F8A001296AA /* FaceppAPISource */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6231B8C1F8A001296AA /* FaceppClient.h */,
+				A420E6241B8C1F8A001296AA /* FaceppClient.m */,
+				A420E6251B8C1F8A001296AA /* FaceppDetection.h */,
+				A420E6261B8C1F8A001296AA /* FaceppDetection.m */,
+				A420E6271B8C1F8A001296AA /* FaceppFaceset.h */,
+				A420E6281B8C1F8A001296AA /* FaceppFaceset.m */,
+				A420E6291B8C1F8A001296AA /* FaceppGroup.h */,
+				A420E62A1B8C1F8A001296AA /* FaceppGroup.m */,
+				A420E62B1B8C1F8A001296AA /* FaceppGrouping.h */,
+				A420E62C1B8C1F8A001296AA /* FaceppGrouping.m */,
+				A420E62D1B8C1F8A001296AA /* FaceppInfo.h */,
+				A420E62E1B8C1F8A001296AA /* FaceppInfo.m */,
+				A420E62F1B8C1F8A001296AA /* FaceppPerson.h */,
+				A420E6301B8C1F8A001296AA /* FaceppPerson.m */,
+				A420E6311B8C1F8A001296AA /* FaceppRecognition.h */,
+				A420E6321B8C1F8A001296AA /* FaceppRecognition.m */,
+				A420E6331B8C1F8A001296AA /* FaceppTrainer.h */,
+				A420E6341B8C1F8A001296AA /* FaceppTrainer.m */,
+			);
+			name = FaceppAPISource;
+			path = FaceppSDK/FaceppAPISource;
+			sourceTree = "<group>";
+		};
+		A420E6351B8C1F8A001296AA /* FaceppResult */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6361B8C1F8A001296AA /* FaceppError.h */,
+				A420E6371B8C1F8A001296AA /* FaceppError.m */,
+				A420E6381B8C1F8A001296AA /* FaceppResult.h */,
+				A420E6391B8C1F8A001296AA /* FaceppResult.m */,
+			);
+			name = FaceppResult;
+			path = FaceppSDK/FaceppResult;
+			sourceTree = "<group>";
+		};
+		A420E63A1B8C1F8A001296AA /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				A420E63B1B8C1F8A001296AA /* CDataScanner.h */,
+				A420E63C1B8C1F8A001296AA /* CDataScanner.m */,
+				A420E63D1B8C1F8A001296AA /* Experimental */,
+				A420E6461B8C1F8A001296AA /* Extensions */,
+				A420E64B1B8C1F8A001296AA /* JSON */,
+			);
+			name = TouchJSON;
+			path = FaceppSDK/TouchJSON;
+			sourceTree = "<group>";
+		};
+		A420E63D1B8C1F8A001296AA /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				A420E63E1B8C1F8A001296AA /* CFilteringJSONSerializer.h */,
+				A420E63F1B8C1F8A001296AA /* CFilteringJSONSerializer.m */,
+				A420E6401B8C1F8A001296AA /* CJSONDeserializer_BlocksExtensions.h */,
+				A420E6411B8C1F8A001296AA /* CJSONDeserializer_BlocksExtensions.m */,
+				A420E6421B8C1F8A001296AA /* CJSONSerialization.h */,
+				A420E6431B8C1F8A001296AA /* CJSONSerialization.m */,
+				A420E6441B8C1F8A001296AA /* CJSONSerializedData.h */,
+				A420E6451B8C1F8A001296AA /* CJSONSerializedData.m */,
+			);
+			path = Experimental;
+			sourceTree = "<group>";
+		};
+		A420E6461B8C1F8A001296AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6471B8C1F8A001296AA /* CDataScanner_Extensions.h */,
+				A420E6481B8C1F8A001296AA /* CDataScanner_Extensions.m */,
+				A420E6491B8C1F8A001296AA /* NSDictionary_JSONExtensions.h */,
+				A420E64A1B8C1F8A001296AA /* NSDictionary_JSONExtensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A420E64B1B8C1F8A001296AA /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A420E64C1B8C1F8A001296AA /* CJSONDeserializer.h */,
+				A420E64D1B8C1F8A001296AA /* CJSONDeserializer.m */,
+				A420E64E1B8C1F8A001296AA /* CJSONScanner.h */,
+				A420E64F1B8C1F8A001296AA /* CJSONScanner.m */,
+				A420E6501B8C1F8A001296AA /* CJSONSerializer.h */,
+				A420E6511B8C1F8A001296AA /* CJSONSerializer.m */,
+				A420E6521B8C1F8A001296AA /* JSONRepresentation.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A420E6681B8C1FAB001296AA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A420E6691B8C1FAB001296AA /* MBProgressHUD.h */,
+				A420E66A1B8C1FAB001296AA /* MBProgressHUD.m */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A420E66C1B8C279A001296AA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A420E66D1B8C279A001296AA /* Picture 1.jpg */,
+				A420E66E1B8C279A001296AA /* Picture 10.jpg */,
+				A420E66F1B8C279A001296AA /* Picture 11.jpg */,
+				A420E6701B8C279A001296AA /* Picture 2.jpg */,
+				A420E6711B8C279A001296AA /* Picture 3.jpg */,
+				A420E6721B8C279A001296AA /* Picture 4.jpg */,
+				A420E6731B8C279A001296AA /* Picture 5.jpg */,
+				A420E6741B8C279A001296AA /* Picture 6.jpg */,
+				A420E6751B8C279A001296AA /* Picture 7.jpg */,
+				A420E6761B8C279A001296AA /* Picture 8.jpg */,
+				A420E6771B8C279A001296AA /* Picture 9.jpg */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A420E5E21B8C1BF8001296AA /* FacePlusPlusDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A420E6061B8C1BF8001296AA /* Build configuration list for PBXNativeTarget "FacePlusPlusDemo" */;
+			buildPhases = (
+				A420E5DF1B8C1BF8001296AA /* Sources */,
+				A420E5E01B8C1BF8001296AA /* Frameworks */,
+				A420E5E11B8C1BF8001296AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacePlusPlusDemo;
+			productName = FacePlusPlusDemo;
+			productReference = A420E5E31B8C1BF8001296AA /* FacePlusPlusDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A420E5FB1B8C1BF8001296AA /* FacePlusPlusDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A420E6091B8C1BF8001296AA /* Build configuration list for PBXNativeTarget "FacePlusPlusDemoTests" */;
+			buildPhases = (
+				A420E5F81B8C1BF8001296AA /* Sources */,
+				A420E5F91B8C1BF8001296AA /* Frameworks */,
+				A420E5FA1B8C1BF8001296AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A420E5FE1B8C1BF8001296AA /* PBXTargetDependency */,
+			);
+			name = FacePlusPlusDemoTests;
+			productName = FacePlusPlusDemoTests;
+			productReference = A420E5FC1B8C1BF8001296AA /* FacePlusPlusDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A420E5DB1B8C1BF7001296AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = CongThanh;
+				TargetAttributes = {
+					A420E5E21B8C1BF8001296AA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					A420E5FB1B8C1BF8001296AA = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = A420E5E21B8C1BF8001296AA;
+					};
+				};
+			};
+			buildConfigurationList = A420E5DE1B8C1BF7001296AA /* Build configuration list for PBXProject "FacePlusPlusDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A420E5DA1B8C1BF7001296AA;
+			productRefGroup = A420E5E41B8C1BF8001296AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A420E5E21B8C1BF8001296AA /* FacePlusPlusDemo */,
+				A420E5FB1B8C1BF8001296AA /* FacePlusPlusDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A420E5E11B8C1BF8001296AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A420E67F1B8C279A001296AA /* Picture 6.jpg in Resources */,
+				A420E67D1B8C279A001296AA /* Picture 4.jpg in Resources */,
+				A420E67E1B8C279A001296AA /* Picture 5.jpg in Resources */,
+				A420E6801B8C279A001296AA /* Picture 7.jpg in Resources */,
+				A420E5F21B8C1BF8001296AA /* Main.storyboard in Resources */,
+				A420E6821B8C279A001296AA /* Picture 9.jpg in Resources */,
+				A420E6791B8C279A001296AA /* Picture 10.jpg in Resources */,
+				A420E6781B8C279A001296AA /* Picture 1.jpg in Resources */,
+				A420E67C1B8C279A001296AA /* Picture 3.jpg in Resources */,
+				A420E67A1B8C279A001296AA /* Picture 11.jpg in Resources */,
+				A420E5F71B8C1BF8001296AA /* LaunchScreen.xib in Resources */,
+				A420E6811B8C279A001296AA /* Picture 8.jpg in Resources */,
+				A420E67B1B8C279A001296AA /* Picture 2.jpg in Resources */,
+				A420E5F41B8C1BF8001296AA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420E5FA1B8C1BF8001296AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A420E5DF1B8C1BF8001296AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A420E6211B8C1F67001296AA /* FaceppAPI.h in Sources */,
+				A420E65C1B8C1F8A001296AA /* FaceppError.m in Sources */,
+				A420E6591B8C1F8A001296AA /* FaceppPerson.m in Sources */,
+				A420E6161B8C1F1A001296AA /* APIKey+APISecret.h in Sources */,
+				A420E6581B8C1F8A001296AA /* FaceppInfo.m in Sources */,
+				A420E6541B8C1F8A001296AA /* FaceppDetection.m in Sources */,
+				A420E5EF1B8C1BF8001296AA /* ViewController.m in Sources */,
+				A420E6621B8C1F8A001296AA /* CJSONSerializedData.m in Sources */,
+				A420E6571B8C1F8A001296AA /* FaceppGrouping.m in Sources */,
+				A420E6601B8C1F8A001296AA /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				A420E6551B8C1F8A001296AA /* FaceppFaceset.m in Sources */,
+				A420E6531B8C1F8A001296AA /* FaceppClient.m in Sources */,
+				A420E61D1B8C1F4B001296AA /* FaceppAPI.m in Sources */,
+				A420E65F1B8C1F8A001296AA /* CFilteringJSONSerializer.m in Sources */,
+				A420E6651B8C1F8A001296AA /* CJSONDeserializer.m in Sources */,
+				A420E65A1B8C1F8A001296AA /* FaceppRecognition.m in Sources */,
+				A420E5EC1B8C1BF8001296AA /* AppDelegate.m in Sources */,
+				A420E6641B8C1F8A001296AA /* NSDictionary_JSONExtensions.m in Sources */,
+				A420E6561B8C1F8A001296AA /* FaceppGroup.m in Sources */,
+				A420E65E1B8C1F8A001296AA /* CDataScanner.m in Sources */,
+				A420E6661B8C1F8A001296AA /* CJSONScanner.m in Sources */,
+				A420E5E91B8C1BF8001296AA /* main.m in Sources */,
+				A420E6611B8C1F8A001296AA /* CJSONSerialization.m in Sources */,
+				A420E65B1B8C1F8A001296AA /* FaceppTrainer.m in Sources */,
+				A420E6671B8C1F8A001296AA /* CJSONSerializer.m in Sources */,
+				A420E65D1B8C1F8A001296AA /* FaceppResult.m in Sources */,
+				A420E6631B8C1F8A001296AA /* CDataScanner_Extensions.m in Sources */,
+				A420E66B1B8C1FAB001296AA /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420E5F81B8C1BF8001296AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A420E6031B8C1BF8001296AA /* FacePlusPlusDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A420E5FE1B8C1BF8001296AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A420E5E21B8C1BF8001296AA /* FacePlusPlusDemo */;
+			targetProxy = A420E5FD1B8C1BF8001296AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A420E5F01B8C1BF8001296AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A420E5F11B8C1BF8001296AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A420E5F51B8C1BF8001296AA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A420E5F61B8C1BF8001296AA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A420E6041B8C1BF8001296AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A420E6051B8C1BF8001296AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A420E6071B8C1BF8001296AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bao Pham QUoc (CR59583397)";
+				INFOPLIST_FILE = FacePlusPlusDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0a79d568-4829-44a1-a50e-ac0751d8b89b";
+			};
+			name = Debug;
+		};
+		A420E6081B8C1BF8001296AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FacePlusPlusDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0a79d568-4829-44a1-a50e-ac0751d8b89b";
+			};
+			name = Release;
+		};
+		A420E60A1B8C1BF8001296AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FacePlusPlusDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacePlusPlusDemo.app/FacePlusPlusDemo";
+			};
+			name = Debug;
+		};
+		A420E60B1B8C1BF8001296AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FacePlusPlusDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FacePlusPlusDemo.app/FacePlusPlusDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A420E5DE1B8C1BF7001296AA /* Build configuration list for PBXProject "FacePlusPlusDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A420E6041B8C1BF8001296AA /* Debug */,
+				A420E6051B8C1BF8001296AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A420E6061B8C1BF8001296AA /* Build configuration list for PBXNativeTarget "FacePlusPlusDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A420E6071B8C1BF8001296AA /* Debug */,
+				A420E6081B8C1BF8001296AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A420E6091B8C1BF8001296AA /* Build configuration list for PBXNativeTarget "FacePlusPlusDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A420E60A1B8C1BF8001296AA /* Debug */,
+				A420E60B1B8C1BF8001296AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A420E5DB1B8C1BF7001296AA /* Project object */;
+}
