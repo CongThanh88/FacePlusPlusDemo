@@ -292,13 +292,15 @@
             
             FaceppResult *result = [[FaceppAPI recognition] verifyWithFaceId:faceId andPersonId:nil orPersonName:PERSON_NAME async:NO];
             if ([result success]) {
+                [self.loadingView hide:YES];
                 BOOL isSamePerson = [[result content][@"is_same_person"] boolValue];
                 if(isSamePerson){
-                    [self.loadingView hide:YES];
-                    
-                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"verify" message:[NSString stringWithFormat:@"verify %@", PERSON_NAME] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Verify result" message:[NSString stringWithFormat:@"Verified %@", PERSON_NAME] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                     [alert show];
                     return YES;
+                }else{
+                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Verify result" message:[NSString stringWithFormat:@"Not is %@", PERSON_NAME] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                    [alert show];
                 }
             }else{
                 [self.loadingView hide:YES];
@@ -310,6 +312,15 @@
                                       otherButtonTitles:nil];
                 [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
             }
+        }else{
+            [self.loadingView hide:YES];
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"Detect error"
+                                  message:@"Can't detect face from image"
+                                  delegate:nil
+                                  cancelButtonTitle:@"OK!"
+                                  otherButtonTitles:nil];
+            [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
         }
         
     } else {
