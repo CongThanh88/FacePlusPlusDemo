@@ -12,7 +12,9 @@
 
 #define PERSON_NAME     @"Do Hung Tam"
 
-
+@interface ViewController()
+@property(nonatomic, strong) MBProgressHUD *loadingView;
+@end
 
 @implementation ViewController
 {
@@ -22,13 +24,31 @@
     FaceDetecUtil *faceUtil;
 }
 
+-(void)showLoading
+{
+    if (!_loadingView) {
+        _loadingView = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:_loadingView];
+    }
+    [_loadingView show:YES];
+}
+
+-(void)hideLoading
+{
+    if (_loadingView) {
+        [_loadingView hide:YES];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     imagePicker = [[UIImagePickerController alloc] init];
     isFirstStart = YES;
-    
+    self.loadingView = [[MBProgressHUD alloc]initWithView:self.view];
+    self.loadingView.labelText = @"Training data";
+    [self.view addSubview:self.loadingView];
 //    faceUtil = [[FaceDetecUtil alloc]init];
 //    faceUtil.delegate = self;
 }
@@ -36,17 +56,17 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
     //setupData
     if (isFirstStart) {
         isFirstStart = NO;
-        [self setupAndTrainingData];
+        [self.loadingView show:YES];
+        [self performSelectorInBackground:@selector(setupAndTrainingData) withObject:nil];
     }
 }
 
 -(void)setupAndTrainingData
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.loadingView show:YES];
     personIds = [[NSMutableArray alloc]init];
     
     NSString *API_KEY = _API_KEY;
@@ -134,8 +154,10 @@
     
     //    // search
     //    [[FaceppAPI recognition] searchWithKeyFaceId:face_id andFacesetId:nil orFacesetName:facesetName];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.loadingView hide:YES];
+    });
     
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
 //    faceUtil.previewView = _previewView;
 //    [faceUtil setupAVCapture];
@@ -272,21 +294,29 @@
             if ([result success]) {
                 BOOL isSamePerson = [[result content][@"is_same_person"] boolValue];
                 if(isSamePerson){
-                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    [self.loadingView hide:YES];
                     
                     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"verify" message:[NSString stringWithFormat:@"verify %@", PERSON_NAME] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                     [alert show];
-                    [MBProgressHUD hideHUDForView:self.view animated:YES];
                     return YES;
                 }
+            }else{
+                [self.loadingView hide:YES];
+                UIAlertView *alert = [[UIAlertView alloc]
+                                      initWithTitle:[NSString stringWithFormat:@"Error message: %@", [result error].message]
+                                      message:@""
+                                      delegate:nil
+                                      cancelButtonTitle:@"OK!"
+                                      otherButtonTitles:nil];
+                [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
             }
         }
         
     } else {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self.loadingView hide:YES];
         // some errors occurred
         UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:[NSString stringWithFormat:@"error message: %@", [detectLocalFileResult error].message]
+                              initWithTitle:[NSString stringWithFormat:@"Error message: %@", [detectLocalFileResult error].message]
                               message:@""
                               delegate:nil
                               cancelButtonTitle:@"OK!"
@@ -297,7 +327,8 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.loadingView.labelText = @"Verifying";
+    [self.loadingView show:YES];
     
     UIImage *sourceImage = info[UIImagePickerControllerOriginalImage];
     UIImage *imageToDisplay = [self fixOrientation:sourceImage];
